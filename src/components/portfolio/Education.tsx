@@ -18,16 +18,16 @@ const items = [
 
 export const Education = () => {
   return (
-    <section id="education" className="py-28 md:py-36">
+    <section id="education" className="py-20 md:py-36">
       <div className="mx-auto max-w-6xl px-5">
-        <div className="grid md:grid-cols-12 gap-10 mb-14">
+        <div className="grid md:grid-cols-12 gap-6 md:gap-10 mb-10 md:mb-14">
           <div className="md:col-span-3 reveal">
             <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
               <span className="font-mono mr-2">04</span> Education
             </div>
           </div>
           <div className="md:col-span-9 reveal">
-            <h2 className="font-display text-4xl md:text-6xl tracking-tight leading-[1]">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-6xl tracking-tight leading-[1.05]">
               Academic <span className="italic font-light">foundation</span>.
             </h2>
           </div>
@@ -37,12 +37,12 @@ export const Education = () => {
           {items.map((it, i) => (
             <div
               key={i}
-              className="reveal group grid md:grid-cols-12 gap-6 items-baseline py-8 border-t hairline last:border-b"
+              className="reveal group grid md:grid-cols-12 gap-2 md:gap-6 items-baseline py-6 md:py-8 border-t hairline last:border-b"
             >
-              <div className="md:col-span-2 font-mono text-sm text-muted-foreground">{it.period}</div>
+              <div className="md:col-span-2 font-mono text-xs sm:text-sm text-muted-foreground">{it.period}</div>
             <div className="md:col-span-10">
-                <h3 className="font-display text-2xl md:text-3xl tracking-tight">{it.title}</h3>
-                <div className="text-muted-foreground mt-1">{it.org}</div>
+                <h3 className="font-display text-xl sm:text-2xl md:text-3xl tracking-tight">{it.title}</h3>
+                <div className="text-sm sm:text-base text-muted-foreground mt-1">{it.org}</div>
               </div>
             </div>
           ))}

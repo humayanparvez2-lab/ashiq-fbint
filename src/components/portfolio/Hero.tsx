@@ -3,24 +3,24 @@ import headshot from "@/assets/headshot.jpg";
 
 export const Hero = () => {
   return (
-    <section id="top" className="relative pt-36 md:pt-44 pb-24 overflow-hidden">
+    <section id="top" className="relative pt-28 md:pt-44 pb-16 md:pb-24 overflow-hidden">
       <div className="mx-auto max-w-6xl px-5">
-        <div className="flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-muted-foreground mb-10 animate-fade-in">
+        <div className="flex items-center gap-3 text-[10px] sm:text-xs uppercase tracking-[0.25em] text-muted-foreground mb-8 md:mb-10 animate-fade-in">
           <span className="h-px w-8 bg-foreground/40" />
           Portfolio · 2026
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-10 items-end">
-          <div className="lg:col-span-8 animate-fade-in">
-            <h1 className="font-display font-medium leading-[0.92] tracking-tighter text-[clamp(3rem,10vw,9.5rem)]">
+        <div className="grid lg:grid-cols-12 gap-8 md:gap-10 items-end">
+          <div className="lg:col-span-8 animate-fade-in order-2 lg:order-1">
+            <h1 className="font-display font-medium leading-[0.92] tracking-tighter text-[clamp(2.5rem,12vw,9.5rem)] break-words">
               MD. Ashikur
               <br />
               <span className="italic font-light">Jaman.</span>
             </h1>
           </div>
 
-          <div className="lg:col-span-4 lg:pb-6 animate-fade-in" style={{ animationDelay: "120ms" }}>
-            <div className="relative rounded-3xl overflow-hidden aspect-[4/5] max-w-xs ml-auto shadow-2xl">
+          <div className="lg:col-span-4 lg:pb-6 animate-fade-in order-1 lg:order-2" style={{ animationDelay: "120ms" }}>
+            <div className="relative rounded-3xl overflow-hidden aspect-[4/5] max-w-[14rem] sm:max-w-xs mx-auto lg:ml-auto lg:mr-0 shadow-2xl">
               <img
                 src={headshot}
                 alt="MD. Ashikur Jaman portrait"
@@ -33,9 +33,9 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="mt-12 grid md:grid-cols-12 gap-8 items-end animate-fade-in" style={{ animationDelay: "240ms" }}>
+        <div className="mt-10 md:mt-12 grid md:grid-cols-12 gap-6 md:gap-8 items-end animate-fade-in" style={{ animationDelay: "240ms" }}>
           <div className="md:col-span-7">
-            <p className="text-xl md:text-2xl font-display italic text-muted-foreground max-w-xl">
+            <p className="text-lg sm:text-xl md:text-2xl font-display italic text-muted-foreground max-w-xl">
               Foreign Client Relationship Executive
               <span className="text-foreground"> & </span>
               IT Professional.
@@ -75,10 +75,10 @@ export const Hero = () => {
       </div>
 
       {/* marquee */}
-      <div className="mt-24 marquee-mask overflow-hidden border-y hairline py-6">
+      <div className="mt-16 md:mt-24 marquee-mask overflow-hidden border-y hairline py-5 md:py-6">
         <div className="flex whitespace-nowrap animate-marquee">
           {Array.from({ length: 2 }).map((_, i) => (
-            <div key={i} className="flex items-center gap-12 px-6 font-display text-3xl md:text-5xl tracking-tight">
+            <div key={i} className="flex items-center gap-8 md:gap-12 px-4 md:px-6 font-display text-2xl sm:text-3xl md:text-5xl tracking-tight">
               {["Client Relations", "·", "MVC Core", "·", "MS SQL Server", "·", "C# / .NET", "·", "CMS Strategy", "·", "Web Development", "·"].map(
                 (w, j) => (
                   <span key={j} className={w === "·" ? "text-muted-foreground" : "italic font-light"}>
