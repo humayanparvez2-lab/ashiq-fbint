@@ -57,7 +57,9 @@ export const Hero = () => {
 
         <div className="mt-14 flex flex-wrap gap-3 animate-fade-in" style={{ animationDelay: "320ms" }}>
           <a
-            href="mailto:ashikshuvo25@gmail.com"
+            href="https://www.facebook.com/ashiq.fb"
+            target="_blank"
+            rel="noreferrer"
             className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3.5 text-sm font-medium hover:opacity-90 transition-all"
           >
             Let's Connect

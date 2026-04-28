@@ -3,19 +3,16 @@ const items = [
     period: "2017 — 2023",
     title: "B.Sc. in Computer Science & Engineering",
     org: "Bangladesh Institute of Science and Technology",
-    score: "CGPA 2.92",
   },
   {
     period: "2014 — 2016",
     title: "Higher Secondary Certificate · Science",
     org: "Khilgaon Gov't High School · Dhaka Board",
-    score: "GPA 3.83",
   },
   {
     period: "2012 — 2014",
     title: "Secondary School Certificate · Science",
     org: "Khilgaon Gov't High School · Dhaka Board",
-    score: "GPA 4.19",
   },
 ];
 
@@ -43,12 +40,9 @@ export const Education = () => {
               className="reveal group grid md:grid-cols-12 gap-6 items-baseline py-8 border-t hairline last:border-b"
             >
               <div className="md:col-span-2 font-mono text-sm text-muted-foreground">{it.period}</div>
-              <div className="md:col-span-7">
+            <div className="md:col-span-10">
                 <h3 className="font-display text-2xl md:text-3xl tracking-tight">{it.title}</h3>
                 <div className="text-muted-foreground mt-1">{it.org}</div>
-              </div>
-              <div className="md:col-span-3 md:text-right font-display text-2xl tracking-tight">
-                <span className="italic font-light">{it.score}</span>
               </div>
             </div>
           ))}
