@@ -35,7 +35,7 @@ export const Contact = () => {
               { icon: Mail, label: "Email", value: "ashikshuvo25@gmail.com", href: "mailto:ashikshuvo25@gmail.com" },
               { icon: Phone, label: "Phone", value: "+880 1515 259123", href: "tel:+8801515259123" },
               { icon: MapPin, label: "Location", value: "Rampura, Dhaka-1219" },
-              { icon: Linkedin, label: "LinkedIn", value: "Connect", href: "https://www.linkedin.com" },
+              { icon: Linkedin, label: "LinkedIn", value: "Connect", href: "https://bd.linkedin.com/in/talktoashiq" },
             ].map((c) => {
               const Tag: any = c.href ? "a" : "div";
               return (
