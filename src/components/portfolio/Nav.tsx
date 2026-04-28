@@ -62,7 +62,9 @@ export const Nav = () => {
             {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
           <a
-            href="mailto:ashikshuvo25@gmail.com"
+            href="https://www.facebook.com/ashiq.fb"
+            target="_blank"
+            rel="noreferrer"
             className="hidden sm:inline-flex h-9 items-center rounded-full bg-foreground text-background px-4 text-sm font-medium hover:opacity-90 transition-opacity"
           >
             Let's Connect
