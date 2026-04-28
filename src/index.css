@@ -158,8 +158,3 @@ All colors MUST be HSL.
     transform: none;
   }
 }
-
-html, body {
-  overflow-x: hidden;
-  max-width: 100vw;
-}
