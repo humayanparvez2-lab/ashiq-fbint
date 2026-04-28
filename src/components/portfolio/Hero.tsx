@@ -26,7 +26,7 @@ export const Hero = () => {
                 alt="MD. Ashikur Jaman portrait"
                 width={768}
                 height={960}
-                className="h-full w-full object-cover grayscale"
+                className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 ring-1 ring-inset ring-foreground/10 rounded-3xl" />
             </div>
