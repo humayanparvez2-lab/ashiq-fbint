@@ -90,11 +90,15 @@ export const Nav = () => {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden fixed inset-x-0 top-0 pt-20 px-4 z-40 transition-all duration-300 ${
+        className={`md:hidden fixed inset-x-0 top-0 pt-20 px-4 z-30 transition-all duration-300 ${
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
+        onClick={() => setOpen(false)}
       >
-        <div className="glass rounded-3xl border hairline p-6 mx-auto max-w-md">
+        <div
+          className="glass rounded-3xl border hairline p-6 mx-auto max-w-md"
+          onClick={(e) => e.stopPropagation()}
+        >
           <nav className="flex flex-col gap-1">
             {links.map((l) => (
               <a
