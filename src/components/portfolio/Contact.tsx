@@ -35,7 +35,7 @@ export const Contact = () => {
               { icon: Mail, label: "Email", value: "ashikshuvo25@gmail.com", href: "mailto:ashikshuvo25@gmail.com" },
               { icon: Phone, label: "Phone", value: "+880 1515 259123", href: "tel:+8801515259123" },
               { icon: MapPin, label: "Location", value: "Rampura, Dhaka-1219" },
-              { icon: Linkedin, label: "LinkedIn", value: "Connect", href: "https://bd.linkedin.com/in/talktoashiq" },
+              { icon: Linkedin, label: "LinkedIn", value: "in/talktoashiq", href: "https://bd.linkedin.com/in/talktoashiq" },
             ].map((c) => {
               const Tag: any = c.href ? "a" : "div";
               return (
@@ -44,11 +44,13 @@ export const Contact = () => {
                   href={c.href}
                   target={c.href?.startsWith("http") ? "_blank" : undefined}
                   rel={c.href?.startsWith("http") ? "noreferrer" : undefined}
-                  className="rounded-2xl border border-background/15 p-4 sm:p-5 hover:bg-background hover:text-foreground transition-colors block min-w-0"
+                  className="rounded-2xl border border-background/20 bg-background/5 p-4 sm:p-5 hover:bg-background hover:text-foreground transition-colors block min-w-0"
                 >
-                  <c.icon className="h-4 w-4 mb-3 opacity-70" />
-                  <div className="text-[10px] uppercase tracking-[0.2em] opacity-60">{c.label}</div>
-                  <div className="mt-1 font-medium text-sm sm:text-base break-words">{c.value}</div>
+                  <c.icon className="h-5 w-5 mb-3 opacity-90" />
+                  <div className="text-[10px] uppercase tracking-[0.2em] opacity-70">{c.label}</div>
+                  <div className="mt-1 font-medium text-sm sm:text-base break-words text-background group-hover:text-foreground">
+                    {c.value}
+                  </div>
                 </Tag>
               );
             })}
