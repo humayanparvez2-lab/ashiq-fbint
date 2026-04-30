@@ -90,7 +90,7 @@ export default {
         },
         "marquee": {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(-16.6667%)" },
         },
         "blink": {
           "0%, 100%": { opacity: "1" },
