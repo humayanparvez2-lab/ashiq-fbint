@@ -78,7 +78,7 @@ export const Hero = () => {
       <div className="mt-24 marquee-mask overflow-hidden border-y hairline py-6">
         <div className="flex whitespace-nowrap animate-marquee-fast md:animate-marquee">
           {Array.from({ length: 2 }).map((_, i) => (
-            <div key={i} className="flex items-center gap-12 px-6 font-display text-3xl md:text-5xl tracking-tight">
+            <div key={i} className="flex items-center gap-6 md:gap-12 px-3 md:px-6 font-display text-lg sm:text-xl md:text-5xl tracking-tight">
               {/* shrink on mobile so more skills fit on-screen */}
               {["Client Relations", "·", "MVC Core", "·", "MS SQL Server", "·", "C# / .NET", "·", "CMS Strategy", "·", "Web Development", "·"].map(
                 (w, j) => (
