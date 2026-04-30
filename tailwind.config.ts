@@ -102,6 +102,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.8s cubic-bezier(0.22,1,0.36,1) both",
         "marquee": "marquee 40s linear infinite",
+        "marquee-fast": "marquee 18s linear infinite",
         "blink": "blink 1.2s ease-in-out infinite",
       },
     },
