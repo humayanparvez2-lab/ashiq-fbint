@@ -47,8 +47,8 @@ export const Skills = () => {
               ))}
             </div>
             <p className="mt-10 font-display text-2xl md:text-3xl tracking-tight max-w-md leading-tight">
-              Building reliable web systems on the
-              <span className="italic"> .NET stack</span>.
+              Building, customizing, and optimizing
+              <span className="italic"> WordPress</span> & web solutions.
             </p>
           </div>
 
