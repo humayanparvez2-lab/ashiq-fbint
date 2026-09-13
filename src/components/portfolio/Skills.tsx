@@ -1,4 +1,4 @@
-import { Code2, Database, Layout, Sparkles, Users, Wrench, FileCode2, Layers } from "lucide-react";
+import { Code2, Database, Layout, Sparkles, Users, Wrench, FileCode2, Layers, Globe } from "lucide-react";
 
 const hard = [
   "WordPress", "Elementor", "WooCommerce", "PHP", "HTML", "CSS",
