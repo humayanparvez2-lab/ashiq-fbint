@@ -113,6 +113,18 @@ export const Skills = () => {
               "Detail is not detail. <span className="text-foreground not-italic">It makes the design.</span>"
             </p>
           </div>
+
+          {/* WordPress */}
+          <div className="reveal col-span-6 md:col-span-2 rounded-3xl border hairline p-6 bg-card hover:bg-foreground hover:text-background transition-colors duration-500 group">
+            <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground group-hover:text-background/60">
+              <Globe className="h-4 w-4" /> WordPress
+            </div>
+            <ul className="mt-5 space-y-2 font-display text-xl tracking-tight">
+              <li>Elementor</li>
+              <li className="italic">WooCommerce</li>
+              <li>Theme & Plugin</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
