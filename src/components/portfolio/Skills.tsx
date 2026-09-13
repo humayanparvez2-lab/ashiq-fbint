@@ -1,8 +1,12 @@
 import { Code2, Database, Layout, Sparkles, Users, Wrench, FileCode2, Layers } from "lucide-react";
 
 const hard = [
-  "MVC Core", "C#", "MS SQL Server 2019", "Visual Studio 2022",
-  "HTML", "CSS", "CMS Management", "Database Management",
+  "WordPress", "Elementor", "WooCommerce", "PHP", "HTML", "CSS",
+  "JavaScript", "MySQL", "cPanel", "SEO", "API Integration",
+  "Responsive Design", "Speed Optimization", "Theme Customization",
+  "Plugin Management", "Website Migration", "MVC Core", "C#",
+  "MS SQL Server 2019", "Visual Studio 2022", "CMS Management",
+  "Database Management",
 ];
 
 export const Skills = () => {
