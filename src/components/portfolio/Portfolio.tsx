@@ -36,7 +36,7 @@ const projects: Project[] = [
     tagline: "A full WooCommerce storefront for a Bangladeshi footwear brand.",
     clientType: "Retail / Footwear e-commerce",
     url: "https://abdullahshoe.com",
-    image: abdullahShoe.url,
+    image: abdullahShoe,
     badge: "WordPress · Elementor · WooCommerce",
     stack: ["WordPress", "Elementor", "WooCommerce", "PHP", "MySQL", "cPanel"],
     overview:
@@ -82,7 +82,7 @@ const projects: Project[] = [
     tagline: "A tour showcase and booking site for a travel agency.",
     clientType: "Travel agency / Tourism",
     url: "https://vintagetoursandtravel.com",
-    image: vintageTours.url,
+    image: vintageTours,
     badge: "WordPress · Elementor · SEO",
     stack: ["WordPress", "Elementor", "PHP", "SEO", "MySQL", "cPanel"],
     overview:
@@ -128,7 +128,7 @@ const projects: Project[] = [
     tagline: "A high-traffic online news portal with organized editorial content.",
     clientType: "News / Online media",
     url: "https://voice7news.com",
-    image: voice7News.url,
+    image: voice7News,
     badge: "WordPress · Plugin Management · Speed",
     stack: ["WordPress", "PHP", "MySQL", "cPanel", "SEO", "Speed Optimization"],
     overview:
