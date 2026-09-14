@@ -6,7 +6,7 @@ export const Contact = () => {
       <div className="mx-auto max-w-6xl px-4 sm:px-5">
         <div className="reveal">
           <div className="text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-background/50 mb-6 sm:mb-8">
-            <span className="font-mono mr-2">05</span> Contact
+            <span className="font-mono mr-2">06</span> Contact
           </div>
           <h2 className="font-display tracking-tighter leading-[0.92] text-[clamp(2.25rem,11vw,10rem)]">
             Let's

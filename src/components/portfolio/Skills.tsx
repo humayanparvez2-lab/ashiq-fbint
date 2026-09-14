@@ -16,7 +16,7 @@ export const Skills = () => {
         <div className="grid md:grid-cols-12 gap-10 mb-14">
           <div className="md:col-span-3 reveal">
             <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              <span className="font-mono mr-2">03</span> Skills
+              <span className="font-mono mr-2">04</span> Skills
             </div>
           </div>
           <div className="md:col-span-9 reveal">
