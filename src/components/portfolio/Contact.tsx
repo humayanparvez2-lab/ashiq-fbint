@@ -44,11 +44,11 @@ export const Contact = () => {
                   href={c.href}
                   target={c.href?.startsWith("http") ? "_blank" : undefined}
                   rel={c.href?.startsWith("http") ? "noreferrer" : undefined}
-                  className="rounded-2xl border border-background/20 bg-background/5 p-4 sm:p-5 hover:bg-background hover:text-foreground transition-colors block min-w-0"
+                  className="group rounded-2xl border border-background/20 bg-background/5 p-4 sm:p-5 text-background hover:bg-background hover:text-foreground transition-colors block min-w-0"
                 >
                   <c.icon className="h-5 w-5 mb-3 opacity-90" />
                   <div className="text-[10px] uppercase tracking-[0.2em] opacity-70">{c.label}</div>
-                  <div className="mt-1 font-medium text-sm sm:text-base break-words text-background group-hover:text-foreground">
+                  <div className="mt-1 font-medium text-sm sm:text-base break-words">
                     {c.value}
                   </div>
                 </Tag>
