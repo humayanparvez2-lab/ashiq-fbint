@@ -6,9 +6,9 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import abdullahShoe from "@/assets/portfolio/abdullah-shoe.jpg.asset.json";
-import vintageTours from "@/assets/portfolio/vintage-tours.jpg.asset.json";
-import voice7News from "@/assets/portfolio/voice7-news.jpg.asset.json";
+import abdullahShoe from "@/assets/portfolio/abdullah-shoe.jpg";
+import vintageTours from "@/assets/portfolio/vintage-tours.jpg";
+import voice7News from "@/assets/portfolio/voice7-news.jpg";
 
 type Project = {
   id: string;
