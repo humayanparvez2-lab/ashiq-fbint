@@ -204,10 +204,10 @@ export const Portfolio = () => {
                 className="md:col-span-5 block overflow-hidden rounded-2xl border hairline aspect-[4/3] text-left"
                 aria-label={`Open case study for ${p.title}`}
               >
-                <img
-                  src={p.image}
+                <LiveShot
+                  url={p.url}
+                  fallback={p.image}
                   alt={`${p.title} website homepage`}
-                  loading="lazy"
                   className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
                 />
               </button>
