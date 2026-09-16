@@ -9,6 +9,7 @@ import {
 import abdullahShoe from "@/assets/portfolio/abdullah-shoe.jpg";
 import vintageTours from "@/assets/portfolio/vintage-tours.jpg";
 import voice7News from "@/assets/portfolio/voice7-news.jpg";
+import LiveShot from "./LiveShot";
 
 type Project = {
   id: string;
