@@ -9,6 +9,7 @@ import {
 import abdullahShoe from "@/assets/portfolio/abdullah-shoe.jpg";
 import vintageTours from "@/assets/portfolio/vintage-tours.jpg";
 import voice7News from "@/assets/portfolio/voice7-news.jpg";
+import LiveShot from "./LiveShot";
 
 type Project = {
   id: string;
@@ -204,10 +205,10 @@ export const Portfolio = () => {
                 className="md:col-span-5 block overflow-hidden rounded-2xl border hairline aspect-[4/3] text-left"
                 aria-label={`Open case study for ${p.title}`}
               >
-                <img
-                  src={p.image}
+                <LiveShot
+                  url={p.url}
+                  fallback={p.image}
                   alt={`${p.title} website homepage`}
-                  loading="lazy"
                   className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
                 />
               </button>
@@ -280,9 +281,11 @@ export const Portfolio = () => {
           {active && (
             <div>
               <div className="relative aspect-[16/9] overflow-hidden">
-                <img
-                  src={active.image}
+                <LiveShot
+                  url={active.url}
+                  fallback={active.image}
                   alt={`${active.title} website preview`}
+                  loading="eager"
                   className="h-full w-full object-cover object-top"
                 />
               </div>
