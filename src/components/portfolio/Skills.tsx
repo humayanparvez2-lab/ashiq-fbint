@@ -3,7 +3,10 @@ import { Code2, Database, Layout, Sparkles, Users, Wrench, FileCode2, Layers, Gl
 const hard = [
   "WordPress", "Elementor", "WooCommerce", "PHP", "HTML", "CSS",
   "JavaScript", "MySQL", "cPanel", "SEO", "API Integration",
-  "Responsive Design", "Speed Optimization", "Website Migration",
+  "Responsive Design", "Speed Optimization", "Theme Customization",
+  "Plugin Management", "Website Migration", "MVC Core", "C#",
+  "MS SQL Server 2019", "Visual Studio 2022", "CMS Management",
+  "Database Management",
 ];
 
 export const Skills = () => {
@@ -91,10 +94,10 @@ export const Skills = () => {
 
           {/* small icon tiles */}
           {[
-            { icon: Database, label: "MySQL" },
-            { icon: FileCode2, label: "PHP" },
+            { icon: Database, label: "SQL" },
+            { icon: FileCode2, label: "C#" },
             { icon: Layout, label: "HTML/CSS" },
-            { icon: Layers, label: "Elementor" },
+            { icon: Layers, label: "MVC" },
           ].map((t, i) => (
             <div
               key={i}
