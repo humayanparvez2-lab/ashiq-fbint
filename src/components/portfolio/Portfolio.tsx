@@ -281,9 +281,11 @@ export const Portfolio = () => {
           {active && (
             <div>
               <div className="relative aspect-[16/9] overflow-hidden">
-                <img
-                  src={active.image}
+                <LiveShot
+                  url={active.url}
+                  fallback={active.image}
                   alt={`${active.title} website preview`}
+                  loading="eager"
                   className="h-full w-full object-cover object-top"
                 />
               </div>
