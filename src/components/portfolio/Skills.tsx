@@ -91,10 +91,10 @@ export const Skills = () => {
 
           {/* small icon tiles */}
           {[
-            { icon: Database, label: "SQL" },
-            { icon: FileCode2, label: "C#" },
+            { icon: Database, label: "MySQL" },
+            { icon: FileCode2, label: "PHP" },
             { icon: Layout, label: "HTML/CSS" },
-            { icon: Layers, label: "MVC" },
+            { icon: Layers, label: "SEO" },
           ].map((t, i) => (
             <div
               key={i}
