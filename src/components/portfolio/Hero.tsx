@@ -80,7 +80,7 @@ export const Hero = () => {
           {Array.from({ length: 6 }).map((_, i) => (
             <div key={i} className="flex items-center gap-6 md:gap-12 px-3 md:px-6 font-display text-lg sm:text-xl md:text-5xl tracking-tight">
               {/* shrink on mobile so more skills fit on-screen */}
-              {["Client Relations", "·", "WordPress", "·", "MVC Core", "·", "MS SQL Server", "·", "C# / .NET", "·", "CMS Strategy", "·", "Web Development", "·"].map(
+              {["Client Relations", "·", "WordPress", "·", "WooCommerce", "·", "Web Development", "·"].map(
                 (w, j) => (
                   <span key={j} className={w === "·" ? "text-muted-foreground" : "italic font-light"}>
                     {w}
