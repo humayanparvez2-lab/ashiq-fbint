@@ -6,9 +6,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import abdullahShoe from "@/assets/portfolio/abdullah-shoe.jpg";
-import vintageTours from "@/assets/portfolio/vintage-tours.jpg";
-import voice7News from "@/assets/portfolio/voice7-news.jpg";
 import LiveShot from "./LiveShot";
 
 type Project = {
@@ -17,7 +14,6 @@ type Project = {
   tagline: string;
   clientType: string;
   url: string;
-  image: string;
   badge: string;
   stack: string[];
   overview: string;
@@ -37,7 +33,6 @@ const projects: Project[] = [
     tagline: "A full WooCommerce storefront for a Bangladeshi footwear brand.",
     clientType: "Retail / Footwear e-commerce",
     url: "https://abdullahshoe.com",
-    image: abdullahShoe,
     badge: "WordPress · Elementor · WooCommerce",
     stack: ["WordPress", "Elementor", "WooCommerce", "PHP", "MySQL", "cPanel"],
     overview:
@@ -83,7 +78,6 @@ const projects: Project[] = [
     tagline: "A tour showcase and booking site for a travel agency.",
     clientType: "Travel agency / Tourism",
     url: "https://vintagetoursandtravel.org/",
-    image: vintageTours,
     badge: "WordPress · Elementor · SEO",
     stack: ["WordPress", "Elementor", "PHP", "SEO", "MySQL", "cPanel"],
     overview:
@@ -129,7 +123,6 @@ const projects: Project[] = [
     tagline: "A high-traffic online news portal with organized editorial content.",
     clientType: "News / Online media",
     url: "https://www.voice7news.tv/",
-    image: voice7News,
     badge: "WordPress · Plugin Management · Speed",
     stack: ["WordPress", "PHP", "MySQL", "cPanel", "SEO", "Speed Optimization"],
     overview:
@@ -202,14 +195,13 @@ export const Portfolio = () => {
             >
               <button
                 onClick={() => setActive(p)}
-                className="md:col-span-5 block overflow-hidden rounded-2xl border hairline aspect-[4/3] text-left"
+                className="md:col-span-5 relative block overflow-hidden rounded-2xl border hairline aspect-[4/3] text-left bg-muted"
                 aria-label={`Open case study for ${p.title}`}
               >
                 <LiveShot
                   url={p.url}
-                  fallback={p.image}
                   alt={`${p.title} website homepage`}
-                  className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                  className="absolute inset-0 h-full w-full pointer-events-none bg-background"
                 />
               </button>
 
@@ -280,13 +272,12 @@ export const Portfolio = () => {
         <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl p-0 gap-0">
           {active && (
             <div>
-              <div className="relative aspect-[16/9] overflow-hidden">
+              <div className="relative aspect-[16/9] min-h-72 overflow-hidden bg-muted">
                 <LiveShot
                   url={active.url}
-                  fallback={active.image}
                   alt={`${active.title} website preview`}
                   loading="eager"
-                  className="h-full w-full object-cover object-top"
+                  className="absolute inset-0 h-full w-full bg-background"
                 />
               </div>
               <div className="p-6 md:p-10">
