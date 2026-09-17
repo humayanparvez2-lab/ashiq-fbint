@@ -201,7 +201,7 @@ export const Portfolio = () => {
                 <LiveShot
                   url={p.url}
                   alt={`${p.title} website homepage`}
-                  className="absolute inset-0 h-full w-full pointer-events-none bg-background"
+                  className="absolute left-0 top-0 h-[900px] w-[1280px] origin-top-left scale-[0.23] sm:scale-[0.32] md:scale-[0.33] pointer-events-none bg-background"
                 />
               </button>
 
@@ -277,7 +277,7 @@ export const Portfolio = () => {
                   url={active.url}
                   alt={`${active.title} website preview`}
                   loading="eager"
-                  className="absolute inset-0 h-full w-full bg-background"
+                  className="absolute left-0 top-0 h-[900px] w-[1280px] origin-top-left scale-[0.24] sm:scale-[0.48] md:scale-[0.59] bg-background"
                 />
               </div>
               <div className="p-6 md:p-10">
