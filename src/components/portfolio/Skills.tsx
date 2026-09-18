@@ -1,4 +1,4 @@
-import { Code2, Database, Layout, Sparkles, Users, Wrench, FileCode2, Layers, Globe, ShoppingCart, Braces, Server } from "lucide-react";
+import { Code2, Database, Layout, Sparkles, Users, Wrench, FileCode2, Globe, ShoppingCart, Braces, Server } from "lucide-react";
 
 const hard = [
   "WordPress",
