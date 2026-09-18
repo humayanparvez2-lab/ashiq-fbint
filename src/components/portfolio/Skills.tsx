@@ -140,8 +140,8 @@ export const Skills = () => {
           </div>
 
           {/* small icon tiles */}
-          <div className="reveal col-span-6 overflow-x-auto pb-2">
-            <div className="grid min-w-[960px] grid-cols-8 gap-4">
+          <div className="reveal col-span-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-4">
             {tiles.map((t) => (
               <div
                 key={t.label}
