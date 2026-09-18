@@ -1,4 +1,4 @@
-import { Code2, Database, Layout, Sparkles, Users, Wrench, FileCode2, Layers, Globe } from "lucide-react";
+import { Code2, Database, Layout, Sparkles, Users, Wrench, FileCode2, Layers, Globe, ShoppingCart, Braces, Server } from "lucide-react";
 
 const hard = [
   "WordPress",
@@ -38,10 +38,14 @@ const soft = [
 ];
 
 const tiles = [
-  { icon: Database, label: "MySQL" },
+  { icon: Globe, label: "WordPress" },
+  { icon: Layout, label: "Elementor" },
+  { icon: ShoppingCart, label: "WooCommerce" },
   { icon: FileCode2, label: "PHP" },
   { icon: Layout, label: "HTML/CSS" },
-  { icon: Layers, label: "SEO" },
+  { icon: Braces, label: "JavaScript" },
+  { icon: Database, label: "MySQL" },
+  { icon: Server, label: "ASP.NET MVC" },
 ];
 
 export const Skills = () => {
@@ -136,16 +140,18 @@ export const Skills = () => {
           </div>
 
           {/* small icon tiles */}
-          <div className="reveal col-span-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="reveal col-span-6 overflow-x-auto pb-2">
+            <div className="grid min-w-[960px] grid-cols-8 gap-4">
             {tiles.map((t) => (
               <div
                 key={t.label}
                 className="aspect-square rounded-3xl border hairline bg-card hover:bg-foreground hover:text-background transition-colors duration-500 flex flex-col items-center justify-center gap-2"
               >
                 <t.icon className="h-6 w-6" />
-                <span className="text-xs font-mono">{t.label}</span>
+                <span className="px-2 text-center text-xs font-mono">{t.label}</span>
               </div>
             ))}
+            </div>
           </div>
 
           {/* Status */}
