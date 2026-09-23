@@ -516,6 +516,24 @@ const projects: Project[] = [
   },
 ];
 
+const rankedProjectIds = [
+  "centica",
+  "planet-m",
+  "vintage-tours",
+  "bush-2-city-adventure",
+  "modasource",
+  "katie-austin",
+  "voice7-news",
+  "abdullah-shoe",
+  "gema-designs",
+  "select-the-best",
+] as const;
+
+const rankedProjects = rankedProjectIds.flatMap((id) => {
+  const project = projects.find((item) => item.id === id);
+  return project ? [project] : [];
+});
+
 export const Portfolio = () => {
   const [active, setActive] = useState<Project | null>(null);
 
@@ -540,7 +558,7 @@ export const Portfolio = () => {
         </div>
 
         <div className="space-y-6">
-          {projects.map((p, i) => (
+          {rankedProjects.map((p, i) => (
             <article
               key={p.id}
               className="reveal group grid md:grid-cols-12 gap-6 rounded-3xl border hairline bg-card p-5 md:p-6 hover:bg-foreground hover:text-background transition-colors duration-500"
