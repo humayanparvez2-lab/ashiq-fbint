@@ -18,7 +18,7 @@ const SITE_HEIGHT = 900;
  * to fit whatever width the parent container gives it — no fixed scale
  * classes, so it stays pixel-perfect on any screen size.
  */
-const LiveShot = ({ url, alt, loading = "lazy", interactive = false }: Props) => {
+const LiveShot = ({ url, alt, loading = "lazy", interactive = false, image }: Props) => {
   const frameRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(0.25);
 
@@ -38,18 +38,34 @@ const LiveShot = ({ url, alt, loading = "lazy", interactive = false }: Props) =>
       className="absolute inset-0 overflow-hidden"
       aria-hidden={!interactive}
     >
-      <iframe
-        src={url}
-        title={alt}
-        loading={loading}
-        referrerPolicy="strict-origin-when-cross-origin"
-        className={`absolute left-0 top-0 origin-top-left bg-background ${interactive ? "" : "pointer-events-none"}`}
-        style={{
-          width: SITE_WIDTH,
-          height: SITE_HEIGHT,
-          transform: `scale(${scale})`,
-        }}
-      />
+      {image ? (
+        <img
+          src={image}
+          alt={alt}
+          loading={loading}
+          className="absolute left-0 top-0 origin-top-left bg-background"
+          style={{
+            width: SITE_WIDTH,
+            height: SITE_HEIGHT,
+            objectFit: "cover",
+            objectPosition: "top",
+            transform: `scale(${scale})`,
+          }}
+        />
+      ) : (
+        <iframe
+          src={url}
+          title={alt}
+          loading={loading}
+          referrerPolicy="strict-origin-when-cross-origin"
+          className={`absolute left-0 top-0 origin-top-left bg-background ${interactive ? "" : "pointer-events-none"}`}
+          style={{
+            width: SITE_WIDTH,
+            height: SITE_HEIGHT,
+            transform: `scale(${scale})`,
+          }}
+        />
+      )}
     </div>
   );
 };
