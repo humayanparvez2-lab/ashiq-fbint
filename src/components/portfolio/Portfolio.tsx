@@ -7,7 +7,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import LiveShot from "./LiveShot";
-import mushroomsMarketShot from "@/assets/portfolio/mushrooms-market.jpg.asset.json";
+import mushroomsMarketShot from "@/assets/portfolio/mushrooms-market.jpg";
 
 type Project = {
   id: string;
