@@ -43,7 +43,7 @@ const LiveShot = ({ url, alt, loading = "lazy", interactive = false, image }: Pr
           src={image}
           alt={alt}
           loading={loading}
-          className="absolute left-0 top-0 origin-top-left bg-background"
+          className="absolute left-0 top-0 max-w-none origin-top-left bg-background"
           style={{
             width: SITE_WIDTH,
             height: SITE_HEIGHT,
