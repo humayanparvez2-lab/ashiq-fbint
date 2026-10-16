@@ -5,6 +5,8 @@ type Props = {
   alt: string;
   loading?: "lazy" | "eager";
   interactive?: boolean;
+  /** Static screenshot used when the site blocks live embedding. */
+  image?: string;
 };
 
 const SITE_WIDTH = 1280;
