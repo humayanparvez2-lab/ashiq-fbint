@@ -568,11 +568,7 @@ export const Portfolio = () => {
                 className="md:col-span-5 relative block overflow-hidden rounded-2xl border hairline aspect-[4/3] text-left bg-muted"
                 aria-label={`Open case study for ${p.title}`}
               >
-                <LiveShot
-                  url={p.url}
-                  alt={`${p.title} website homepage`}
-                  className="absolute left-0 top-0 h-[900px] w-[1280px] origin-top-left scale-[0.23] sm:scale-[0.32] md:scale-[0.33] pointer-events-none bg-background"
-                />
+                <LiveShot url={p.url} alt={`${p.title} website homepage`} />
               </button>
 
               <div className="md:col-span-7 flex flex-col justify-between py-1 min-w-0">
@@ -647,7 +643,6 @@ export const Portfolio = () => {
                   url={active.url}
                   alt={`${active.title} website preview`}
                   loading="eager"
-                  className="absolute left-0 top-0 h-[900px] w-[1280px] origin-top-left scale-[0.24] sm:scale-[0.48] md:scale-[0.59] bg-background"
                 />
               </div>
               <div className="p-6 md:p-10">
