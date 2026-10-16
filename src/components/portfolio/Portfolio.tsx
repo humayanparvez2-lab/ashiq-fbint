@@ -14,6 +14,7 @@ type Project = {
   tagline: string;
   clientType: string;
   url: string;
+  image?: string;
   badge: string;
   stack: string[];
   overview: string;
@@ -467,6 +468,7 @@ const projects: Project[] = [
     tagline: "A specialist online store for adaptogenic mushroom wellness products.",
     clientType: "Wellness / E-commerce",
     url: "https://mushrooms.market/",
+    image: mushroomsMarketShot.url,
     badge: "E-commerce · Product UX · SEO",
     stack: ["E-commerce CMS", "HTML5", "CSS3", "JavaScript", "Responsive Web Design", "Product Catalog", "Online Payments", "SEO"],
     overview:
