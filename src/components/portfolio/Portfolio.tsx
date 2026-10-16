@@ -469,7 +469,7 @@ const projects: Project[] = [
     tagline: "A specialist online store for adaptogenic mushroom wellness products.",
     clientType: "Wellness / E-commerce",
     url: "https://mushrooms.market/",
-    image: mushroomsMarketShot.url,
+    image: mushroomsMarketShot,
     badge: "E-commerce · Product UX · SEO",
     stack: ["E-commerce CMS", "HTML5", "CSS3", "JavaScript", "Responsive Web Design", "Product Catalog", "Online Payments", "SEO"],
     overview:
