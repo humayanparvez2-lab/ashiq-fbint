@@ -7,6 +7,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import LiveShot from "./LiveShot";
+import mushroomsMarketShot from "@/assets/portfolio/mushrooms-market.jpg";
 
 type Project = {
   id: string;
@@ -14,6 +15,7 @@ type Project = {
   tagline: string;
   clientType: string;
   url: string;
+  image?: string;
   badge: string;
   stack: string[];
   overview: string;
@@ -467,6 +469,7 @@ const projects: Project[] = [
     tagline: "A specialist online store for adaptogenic mushroom wellness products.",
     clientType: "Wellness / E-commerce",
     url: "https://mushrooms.market/",
+    image: mushroomsMarketShot,
     badge: "E-commerce · Product UX · SEO",
     stack: ["E-commerce CMS", "HTML5", "CSS3", "JavaScript", "Responsive Web Design", "Product Catalog", "Online Payments", "SEO"],
     overview:
@@ -568,11 +571,7 @@ export const Portfolio = () => {
                 className="md:col-span-5 relative block overflow-hidden rounded-2xl border hairline aspect-[4/3] text-left bg-muted"
                 aria-label={`Open case study for ${p.title}`}
               >
-                <LiveShot
-                  url={p.url}
-                  alt={`${p.title} website homepage`}
-                  className="absolute left-0 top-0 h-[900px] w-[1280px] origin-top-left scale-[0.23] sm:scale-[0.32] md:scale-[0.33] pointer-events-none bg-background"
-                />
+                <LiveShot url={p.url} alt={`${p.title} website homepage`} image={p.image} />
               </button>
 
               <div className="md:col-span-7 flex flex-col justify-between py-1 min-w-0">
@@ -647,7 +646,7 @@ export const Portfolio = () => {
                   url={active.url}
                   alt={`${active.title} website preview`}
                   loading="eager"
-                  className="absolute left-0 top-0 h-[900px] w-[1280px] origin-top-left scale-[0.24] sm:scale-[0.48] md:scale-[0.59] bg-background"
+                  image={active.image}
                 />
               </div>
               <div className="p-6 md:p-10">
