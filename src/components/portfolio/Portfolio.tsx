@@ -7,6 +7,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import LiveShot from "./LiveShot";
+import mushroomsMarketShot from "@/assets/portfolio/mushrooms-market.jpg.asset.json";
 
 type Project = {
   id: string;
@@ -570,7 +571,7 @@ export const Portfolio = () => {
                 className="md:col-span-5 relative block overflow-hidden rounded-2xl border hairline aspect-[4/3] text-left bg-muted"
                 aria-label={`Open case study for ${p.title}`}
               >
-                <LiveShot url={p.url} alt={`${p.title} website homepage`} />
+                <LiveShot url={p.url} alt={`${p.title} website homepage`} image={p.image} />
               </button>
 
               <div className="md:col-span-7 flex flex-col justify-between py-1 min-w-0">
@@ -645,6 +646,7 @@ export const Portfolio = () => {
                   url={active.url}
                   alt={`${active.title} website preview`}
                   loading="eager"
+                  image={active.image}
                 />
               </div>
               <div className="p-6 md:p-10">
