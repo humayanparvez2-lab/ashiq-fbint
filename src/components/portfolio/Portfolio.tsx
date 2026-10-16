@@ -639,7 +639,7 @@ export const Portfolio = () => {
 
       {/* Case study modal */}
       <Dialog open={!!active} onOpenChange={(o) => !o && setActive(null)}>
-        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl p-0 gap-0">
+        <DialogContent className="w-[calc(100vw-1.5rem)] max-w-3xl max-h-[85vh] overflow-y-auto overflow-x-hidden rounded-2xl sm:rounded-3xl p-0 gap-0">
           {active && (
             <div>
               <div className="relative aspect-[16/9] min-h-72 overflow-hidden bg-muted">
