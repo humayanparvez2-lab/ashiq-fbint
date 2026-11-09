@@ -30,6 +30,60 @@ type Project = {
 
 const projects: Project[] = [
   {
+    id: "dioxa-skincare",
+    title: "Dioxa Skincare",
+    tagline: "A complete online beauty store for skincare, haircare, and body-care products.",
+    clientType: "Beauty / Skincare e-commerce",
+    url: "https://dioxaskincare.com/",
+    badge: "WordPress · WooCommerce · E-commerce",
+    stack: ["WordPress", "WooCommerce", "Elementor", "PHP", "HTML5", "CSS3", "JavaScript", "MySQL", "Responsive Web Design", "SEO"],
+    overview:
+      "Dioxa Skincare is a Bangladesh-based online beauty retailer offering skincare, haircare, and body-care products from international brands. The storefront brings together a broad catalog with shopping paths by skin type and concern, detailed product pages, local pricing, and delivery information.",
+    goals: [
+      "Build a complete online storefront for beauty and personal-care products",
+      "Make a large catalog easier to explore by product category, skin type, and concern",
+      "Present product information, origin, pricing, and delivery terms clearly",
+      "Create a smooth shopping experience for customers browsing on phones or computers",
+      "Give the business a manageable platform for ongoing product and content updates",
+    ],
+    role: "I handled the website end to end, taking responsibility for the storefront planning, design and development, WooCommerce setup, product and category organization, responsive implementation, site configuration, and launch.",
+    process: [
+      "Mapped the store experience around product discovery, shopping categories, and customer needs",
+      "Set up the WordPress and WooCommerce storefront and its core shopping structure",
+      "Organized products and browsing paths around categories, skin types, and concerns",
+      "Built product pages with clear descriptions, pricing, origin, and purchase actions",
+      "Added customer-facing delivery, authenticity, and order-support information",
+      "Refined and checked the shopping experience across desktop and mobile screens",
+    ],
+    features: [
+      "Online catalog spanning skincare, haircare, and body-care products",
+      "Browse-by-skin-type and browse-by-concern discovery sections",
+      "Product categories, search, and detailed product pages",
+      "Local currency pricing and WooCommerce cart and ordering flow",
+      "Product origin and size information where available",
+      "Cash-on-delivery information and free-delivery threshold messaging",
+      "Order tracking, account, and wishlist access",
+    ],
+    challenges: [
+      {
+        challenge: "A wide product range can make it difficult for shoppers to find relevant items.",
+        solution: "I structured discovery around familiar product categories, skin types, and skincare concerns, alongside product search.",
+      },
+      {
+        challenge: "Customers need confidence in product details and delivery before ordering beauty products online.",
+        solution: "I made product information, country of origin, authenticity messaging, local pricing, and delivery terms easy to find across the shopping journey.",
+      },
+      {
+        challenge: "The store needed to keep product exploration and checkout practical on smaller screens.",
+        solution: "I adapted the catalog, product details, and purchase flow for mobile browsing and touch-based use.",
+      },
+    ],
+    responsive:
+      "The store experience adapts across phones, tablets, and desktop screens, including product discovery, catalog browsing, product details, and purchase actions.",
+    result:
+      "A complete, responsive beauty e-commerce website that brings product discovery, detailed catalog pages, and online ordering together for Dioxa Skincare.",
+  },
+  {
     id: "abdullah-shoe",
     title: "Abdullah Shoe",
     tagline: "A full WooCommerce storefront for a Bangladeshi footwear brand.",
@@ -414,56 +468,6 @@ const projects: Project[] = [
       "A professional B2B textile website presenting fabric expertise, sustainability, global sourcing, and lead-generation opportunities with clarity.",
   },
   {
-    id: "select-the-best",
-    title: "Select The Best",
-    tagline: "An authority-led resource platform for stronger candidate selection and behavioral interviewing.",
-    clientType: "Professional services / Recruitment",
-    url: "https://selectthebest.com/",
-    badge: "WordPress · Elementor · Resource UX",
-    stack: ["WordPress", "Elementor", "HTML5", "CSS3", "JavaScript", "Responsive Web Design", "Lead Forms", "SEO"],
-    overview:
-      "Select The Best is a professional platform helping HR professionals, leaders, and recruiters improve candidate selection and behavioral interviewing through practical, research-backed strategies and resources.",
-    goals: [
-      "Create a professional authority-focused website",
-      "Communicate the platform's purpose and expertise clearly",
-      "Present recruitment resources effectively",
-      "Build credibility with HR professionals",
-      "Generate leads through content and resource access",
-      "Create a simple, responsive navigation experience",
-    ],
-    role: "I handled WordPress development, UI/UX implementation, responsive frontend work, content architecture, resources and lead generation, calls to action, form integration, and website optimization.",
-    process: [
-      "Reviewed the HR and recruitment business positioning",
-      "Structured the website around expertise, resources, and conversion",
-      "Created a professional visual hierarchy",
-      "Developed content, resource, and lead-generation sections",
-      "Optimized call-to-action placement and responsive layouts",
-      "Tested across major devices and browsers",
-    ],
-    features: [
-      "Professional HR-focused homepage",
-      "Recruitment and behavioral-interviewing content",
-      "Resource-focused sections",
-      "Lead-generation forms and calls to action",
-      "Structured professional branding",
-      "Responsive and mobile-optimized presentation",
-    ],
-    challenges: [
-      {
-        challenge: "Recruitment and interviewing content can be information-heavy.",
-        solution: "Content was divided into digestible sections with clear headings, supporting visuals, and focused calls to action.",
-      },
-      {
-        challenge: "The website needed to establish authority quickly.",
-        solution: "Professional presentation, clear messaging, accessible resources, and credibility-focused content reinforce expertise from the first visit.",
-      },
-    ],
-    responsive:
-      "Educational content, resource access, and lead forms were arranged for comfortable reading and efficient action on phones, tablets, and desktop screens.",
-    result:
-      "A professional HR-focused website that communicates expertise and creates a clear path from educational content to resource engagement and lead generation.",
-  },
-  {
     id: "mushrooms-market",
     title: "Mushrooms Market",
     tagline: "A specialist online store for adaptogenic mushroom wellness products.",
@@ -520,6 +524,7 @@ const projects: Project[] = [
 ];
 
 const rankedProjectIds = [
+  "dioxa-skincare",
   "mushrooms-market",
   "planet-m",
   "vintage-tours",
@@ -529,7 +534,6 @@ const rankedProjectIds = [
   "voice7-news",
   "abdullah-shoe",
   "gema-designs",
-  "select-the-best",
 ] as const;
 
 const rankedProjects = rankedProjectIds.flatMap((id) => {
