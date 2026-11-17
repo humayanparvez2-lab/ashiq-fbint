@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ArrowUpRight, ExternalLink, Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -547,73 +548,67 @@ export const Portfolio = () => {
   return (
     <section id="portfolio" className="py-28 md:py-36 bg-background">
       <div className="mx-auto max-w-6xl px-5">
-        <div className="grid md:grid-cols-12 gap-10 mb-14">
-          <div className="md:col-span-3 reveal">
-            <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              <span className="font-mono mr-2">03</span> Portfolio
-            </div>
+        <div className="mb-12 reveal">
+          <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            <span className="mr-2 font-mono">03</span> Portfolio
           </div>
-          <div className="md:col-span-9 reveal">
-            <h2 className="font-display text-4xl md:text-6xl tracking-tight leading-[1]">
-              Selected <span className="italic font-light">WordPress</span> projects.
-            </h2>
-            <p className="mt-4 max-w-xl text-muted-foreground text-sm md:text-base">
-              Real client websites I designed, built, and launched — from
-              e-commerce to travel and online news.
-            </p>
-          </div>
+          <h2 className="mt-5 font-display text-5xl leading-none sm:text-7xl">
+            Case <span className="italic font-light">studies.</span>
+          </h2>
+          <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+            Selected client work across e-commerce, travel, media, and digital services.
+          </p>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-7 sm:space-y-9">
           {rankedProjects.map((p, i) => (
             <article
               key={p.id}
-              className="reveal group grid md:grid-cols-12 gap-6 rounded-3xl border hairline bg-card p-5 md:p-6 hover:bg-foreground hover:text-background transition-colors duration-500"
+              className="reveal group grid overflow-hidden rounded-3xl bg-foreground text-background md:grid-cols-2"
             >
               <button
                 onClick={() => setActive(p)}
-                className="md:col-span-5 relative block overflow-hidden rounded-2xl border hairline aspect-[4/3] text-left bg-muted"
+                className={`relative block aspect-[4/3] overflow-hidden bg-muted text-left md:aspect-auto md:min-h-[26rem] ${i % 2 === 1 ? "md:order-2" : ""}`}
                 aria-label={`Open case study for ${p.title}`}
               >
                 <LiveShot url={p.url} alt={`${p.title} website homepage`} image={p.image} />
               </button>
 
-              <div className="md:col-span-7 flex flex-col justify-between py-1 min-w-0">
-                <div>
-                  <div className="flex items-center justify-between gap-4">
-                    <span className="font-mono text-xs text-muted-foreground group-hover:text-background/60">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground group-hover:text-background/60">
-                      {p.clientType}
-                    </span>
+              <div className="flex min-w-0 flex-col justify-center p-6 sm:p-9 lg:p-12">
+                <div className="flex items-center justify-between gap-4 text-xs text-background/60">
+                  <span className="font-mono">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="text-right uppercase tracking-[0.16em]">{p.clientType}</span>
+                </div>
+                <div className="mt-8 text-xs text-background/65">{p.badge}</div>
+                <h3 className="mt-3 break-words font-display text-3xl leading-tight sm:text-4xl lg:text-5xl">{p.title}</h3>
+                <p className="mt-3 max-w-xl text-sm leading-relaxed text-background/65 sm:text-base">{p.tagline}</p>
+
+                <div className="mt-7 space-y-4 text-sm">
+                  <div>
+                    <h4 className="font-semibold">Challenge</h4>
+                    <p className="mt-1 leading-relaxed text-background/65">{p.challenges[0]?.challenge ?? p.overview}</p>
                   </div>
-                  <h3 className="mt-3 font-display text-3xl md:text-4xl tracking-tight">
-                    {p.title}
-                  </h3>
-                  <p className="mt-2 text-sm md:text-base text-muted-foreground group-hover:text-background/70 max-w-lg">
-                    {p.tagline}
-                  </p>
-                  <div className="mt-4 inline-flex items-center rounded-full border hairline px-3 py-1 text-xs group-hover:border-background/30">
-                    {p.badge}
+                  <div>
+                    <h4 className="font-semibold">What I did</h4>
+                    <p className="mt-1 line-clamp-3 leading-relaxed text-background/65">{p.role}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Result</h4>
+                    <p className="mt-1 line-clamp-2 leading-relaxed text-background/65">{p.result}</p>
                   </div>
                 </div>
 
-                <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <button
-                    onClick={() => setActive(p)}
-                    className="inline-flex h-10 items-center gap-2 rounded-full bg-foreground text-background group-hover:bg-background group-hover:text-foreground px-5 text-sm font-medium transition-colors"
-                  >
-                    View Case Study <ArrowUpRight className="h-4 w-4" />
-                  </button>
-                  <a
-                    href={p.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex h-10 items-center gap-2 rounded-full border hairline px-5 text-sm font-medium group-hover:border-background/40 hover:opacity-80 transition"
-                  >
-                    <Globe className="h-4 w-4" /> Visit Website
-                  </a>
+                <div className="mt-7 flex flex-wrap items-center gap-3">
+                  <Button asChild className="h-10 rounded-full bg-background px-5 text-foreground hover:bg-background/90">
+                    <button onClick={() => setActive(p)}>
+                      View case study <ArrowUpRight />
+                    </button>
+                  </Button>
+                  <Button asChild variant="outline" className="h-10 rounded-full border-background/35 bg-transparent px-5 text-background hover:bg-background hover:text-foreground">
+                    <a href={p.url} target="_blank" rel="noreferrer">
+                      <Globe /> Visit website
+                    </a>
+                  </Button>
                 </div>
               </div>
             </article>
