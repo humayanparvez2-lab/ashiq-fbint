@@ -42,21 +42,21 @@ export const Nav = () => {
       <div
         className={`mx-auto max-w-6xl px-4 sm:px-5 flex items-center justify-between transition-all duration-500 ${
           scrolled
-            ? "glass rounded-full border hairline px-4 sm:px-5 py-2.5"
-            : ""
+            ? "glass rounded-full border hairline px-4 sm:px-5 py-2.5 text-foreground"
+            : "text-background"
         }`}
         style={scrolled ? { width: "calc(100% - 1.5rem)" } : {}}
       >
         <a href="#top" className="flex items-center gap-2 font-display text-lg tracking-tight">
-          <span className="inline-block h-2 w-2 rounded-full bg-foreground animate-blink" />
-          <span>Ashikur<span className="text-muted-foreground">.</span></span>
+          <span className={`inline-block h-2 w-2 rounded-full animate-blink ${scrolled ? "bg-foreground" : "bg-background"}`} />
+          <span>Ashikur<span className={scrolled ? "text-muted-foreground" : "text-background/60"}>.</span></span>
         </a>
         <nav className="hidden md:flex items-center gap-7 text-sm">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="relative text-muted-foreground hover:text-foreground transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:bg-foreground after:transition-all hover:after:w-full"
+              className={`relative transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-px after:w-0 after:transition-all hover:after:w-full ${scrolled ? "text-muted-foreground hover:text-foreground after:bg-foreground" : "text-background/70 hover:text-background after:bg-background"}`}
             >
               {l.label}
             </a>
@@ -66,7 +66,7 @@ export const Nav = () => {
           <button
             aria-label="Toggle dark mode"
             onClick={() => setDark((d) => !d)}
-            className="h-9 w-9 grid place-items-center rounded-full border hairline hover:bg-accent transition-colors"
+            className={`h-9 w-9 grid place-items-center rounded-full border transition-colors ${scrolled ? "hairline hover:bg-accent" : "border-background/35 hover:bg-background/10"}`}
           >
             {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
@@ -74,7 +74,7 @@ export const Nav = () => {
             href="https://www.facebook.com/ashiq.fb"
             target="_blank"
             rel="noreferrer"
-            className="hidden md:inline-flex h-9 items-center rounded-full bg-foreground text-background px-4 text-sm font-medium hover:opacity-90 transition-opacity"
+            className={`hidden md:inline-flex h-9 items-center rounded-full px-4 text-sm font-medium transition-colors ${scrolled ? "bg-foreground text-background hover:opacity-90" : "border border-background/40 text-background hover:bg-background hover:text-foreground"}`}
           >
             Let's Connect
           </a>
@@ -82,7 +82,7 @@ export const Nav = () => {
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
-            className="md:hidden h-9 w-9 grid place-items-center rounded-full border hairline hover:bg-accent transition-colors"
+            className={`md:hidden h-9 w-9 grid place-items-center rounded-full border transition-colors ${scrolled ? "hairline hover:bg-accent" : "border-background/35 hover:bg-background/10"}`}
           >
             {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </button>

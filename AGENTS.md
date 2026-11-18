@@ -1,0 +1,1 @@
+- Keep website previews reusable and support both fixed desktop-canvas previews and expanded native interactive views so case studies fill their available space.

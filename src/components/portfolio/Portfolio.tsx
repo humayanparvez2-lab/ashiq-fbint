@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUpRight, ExternalLink, Globe } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Globe, Maximize2, Minimize2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -544,6 +544,12 @@ const rankedProjects = rankedProjectIds.flatMap((id) => {
 
 export const Portfolio = () => {
   const [active, setActive] = useState<Project | null>(null);
+  const [fullView, setFullView] = useState(false);
+
+  const openCaseStudy = (project: Project) => {
+    setFullView(false);
+    setActive(project);
+  };
 
   return (
     <section id="portfolio" className="py-28 md:py-36 bg-background">
@@ -567,7 +573,7 @@ export const Portfolio = () => {
               className="reveal group grid overflow-hidden rounded-3xl bg-foreground text-background md:grid-cols-2"
             >
               <button
-                onClick={() => setActive(p)}
+                onClick={() => openCaseStudy(p)}
                 className={`relative block aspect-[4/3] overflow-hidden bg-muted text-left md:aspect-auto md:min-h-[26rem] ${i % 2 === 1 ? "md:order-2" : ""}`}
                 aria-label={`Open case study for ${p.title}`}
               >
@@ -600,7 +606,7 @@ export const Portfolio = () => {
 
                 <div className="mt-7 flex flex-wrap items-center gap-3">
                   <Button asChild className="h-10 rounded-full bg-background px-5 text-foreground hover:bg-background/90">
-                    <button onClick={() => setActive(p)}>
+                    <button onClick={() => openCaseStudy(p)}>
                       View case study <ArrowUpRight />
                     </button>
                   </Button>
@@ -636,9 +642,25 @@ export const Portfolio = () => {
       </div>
 
       {/* Case study modal */}
-      <Dialog open={!!active} onOpenChange={(o) => !o && setActive(null)}>
-        <DialogContent className="w-[calc(100vw-1.5rem)] max-w-3xl max-h-[85vh] overflow-y-auto overflow-x-hidden rounded-2xl sm:rounded-3xl p-0 gap-0">
+      <Dialog open={!!active} onOpenChange={(o) => { if (!o) { setActive(null); setFullView(false); } }}>
+        <DialogContent className={fullView
+          ? "fixed inset-2 left-2 top-2 h-[calc(100dvh-1rem)] w-[calc(100vw-1rem)] max-w-none max-h-none translate-x-0 translate-y-0 overflow-hidden rounded-lg p-0 gap-0"
+          : "w-[calc(100vw-1.5rem)] max-w-3xl max-h-[85vh] overflow-y-auto overflow-x-hidden rounded-2xl sm:rounded-3xl p-0 gap-0"}
+        >
           {active && (
+            fullView ? (
+              <div className="relative h-full w-full overflow-hidden bg-background">
+                <LiveShot url={active.url} alt={`${active.title} full website`} loading="eager" interactive native image={active.image} />
+                <div className="absolute right-3 top-3 z-10 flex gap-2">
+                  <Button asChild size="icon" variant="secondary" aria-label="Open original website" title="Open original website">
+                    <a href={active.url} target="_blank" rel="noreferrer"><ExternalLink /></a>
+                  </Button>
+                  <Button size="icon" variant="secondary" onClick={() => setFullView(false)} aria-label="Back to case study" title="Back to case study">
+                    <Minimize2 />
+                  </Button>
+                </div>
+              </div>
+            ) : (
             <div className="min-w-0">
               <div className="relative aspect-[16/9] min-h-72 w-full min-w-0 overflow-hidden bg-muted">
                 <LiveShot
@@ -647,6 +669,9 @@ export const Portfolio = () => {
                   loading="eager"
                   image={active.image}
                 />
+                <Button size="icon" variant="secondary" className="absolute right-3 top-3 z-10" onClick={() => setFullView(true)} aria-label="View full website" title="View full website">
+                  <Maximize2 />
+                </Button>
               </div>
               <div className="p-6 md:p-10">
                 <DialogHeader>
@@ -737,6 +762,7 @@ export const Portfolio = () => {
                 </div>
               </div>
             </div>
+            )
           )}
         </DialogContent>
       </Dialog>
