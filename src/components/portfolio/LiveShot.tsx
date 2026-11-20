@@ -44,7 +44,7 @@ const LiveShot = ({ url, alt, loading = "lazy", interactive = false, image, nati
   return (
     <div
       ref={frameRef}
-      className="absolute inset-0 overflow-hidden"
+      className={`absolute inset-0 ${native ? "overflow-auto" : "overflow-hidden"}`}
       aria-hidden={!interactive}
     >
       {image ? (
@@ -52,8 +52,8 @@ const LiveShot = ({ url, alt, loading = "lazy", interactive = false, image, nati
           src={image}
           alt={alt}
           loading={loading}
-          className="absolute left-0 top-0 max-w-none origin-top-left bg-background"
-          style={native ? { width: "100%", height: "100%", objectFit: "cover" } : {
+          className={`${native ? "relative block h-auto w-full max-w-none bg-background" : "absolute left-0 top-0 max-w-none origin-top-left bg-background"}`}
+          style={native ? undefined : {
             width: SITE_WIDTH,
             height: SITE_HEIGHT,
             objectFit: "cover",

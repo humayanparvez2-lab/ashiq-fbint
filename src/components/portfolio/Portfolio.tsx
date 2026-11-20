@@ -662,11 +662,13 @@ export const Portfolio = () => {
               </div>
             ) : (
             <div className="min-w-0">
-              <div className="relative aspect-[16/9] min-h-72 w-full min-w-0 overflow-hidden bg-muted">
+              <div className="relative h-[52vh] min-h-72 max-h-[560px] w-full min-w-0 overflow-hidden bg-muted">
                 <LiveShot
                   url={active.url}
                   alt={`${active.title} website preview`}
                   loading="eager"
+                  interactive
+                  native
                   image={active.image}
                 />
                 <Button size="icon" variant="secondary" className="absolute right-3 top-3 z-10" onClick={() => setFullView(true)} aria-label="View full website" title="View full website">
