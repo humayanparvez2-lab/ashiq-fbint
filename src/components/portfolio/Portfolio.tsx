@@ -572,13 +572,11 @@ export const Portfolio = () => {
               key={p.id}
               className="reveal group grid overflow-hidden rounded-3xl bg-foreground text-background md:grid-cols-2"
             >
-              <button
-                onClick={() => openCaseStudy(p)}
-                className={`relative block aspect-[4/3] overflow-hidden bg-muted text-left md:aspect-auto md:min-h-[26rem] ${i % 2 === 1 ? "md:order-2" : ""}`}
-                aria-label={`Open case study for ${p.title}`}
+              <div
+                className={`relative block aspect-[4/3] overflow-hidden bg-muted md:aspect-auto md:min-h-[26rem] ${i % 2 === 1 ? "md:order-2" : ""}`}
               >
-                <LiveShot url={p.url} alt={`${p.title} website homepage`} image={p.image} />
-              </button>
+                <LiveShot url={p.url} alt={`${p.title} website homepage`} image={p.image} interactive native />
+              </div>
 
               <div className="flex min-w-0 flex-col justify-center p-6 sm:p-9 lg:p-12">
                 <div className="flex items-center justify-between gap-4 text-xs text-background/60">
